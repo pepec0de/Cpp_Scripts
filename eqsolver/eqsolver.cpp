@@ -77,7 +77,7 @@ string toStr(char value) {
 }
 /// EQUATION FUNCTIONS
 // Func to check if an element has the Var
-boolean hasVar(string element) {
+bool hasVar(string element) {
 	for (int i = 0; i < element.size(); i++) {
 		if (element[i] == VAR) {
 			return true;
@@ -87,7 +87,7 @@ boolean hasVar(string element) {
 }
 
 // Func to check if an element has a pow with the Var
-boolean hasVarWpow(string element) {
+bool hasVarWpow(string element) {
 	// Suponemos que seria 1x^2 : x^
 	for (int i = 0; i < element.size(); i++) {
 		if (element[i] == VAR && element[i+1] == '^') {
