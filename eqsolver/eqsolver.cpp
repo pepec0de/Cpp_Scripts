@@ -103,7 +103,7 @@ int getVarPow(string element) {
 	if (hasVarWpow(element)) {
 		for (int i = 0; i < element.size(); i++) {
 			if (element[i] == VAR) {
-				for (int j = i+1; j < element.size(); j++) {
+				for (int j = i+2; j < element.size(); j++) {
 					strPow += element[j];
 				}
 				return stoi(strPow);
