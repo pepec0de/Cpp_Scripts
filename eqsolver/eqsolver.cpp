@@ -1,7 +1,7 @@
 #include <iostream>
 #include <vector>
 
-#define VAR "x"
+#define VAR 'x'
 
 using namespace std;
 
@@ -69,5 +69,46 @@ string getSubstring(string str, int start) {
 	return result;
 }
 
+string toStr(char value) {
+	// Una string es un array de chars por tanto:
+	string str;
+	str.push_back(value);
+	return str;
+}
 /// EQUATION FUNCTIONS
 // Func to check if an element has the Var
+boolean hasVar(string element) {
+	for (int i = 0; i < element.size(); i++) {
+		if (element[i] == VAR) {
+			return true;
+		}
+	}
+	return false;
+}
+
+// Func to check if an element has a pow with the Var
+boolean hasVarWpow(string element) {
+	// Suponemos que seria 1x^2 : x^
+	for (int i = 0; i < element.size(); i++) {
+		if (element[i] == VAR && element[i+1] == '^') {
+			return true;
+		}
+	}
+	return false;
+}
+
+// Func to get the pow of the var
+int getVarPow(string element) {
+	string strPow;
+	if (hasVarWpow(element)) {
+		for (int i = 0; i < element.size(); i++) {
+			if (element[i] == VAR) {
+				for (int j = i+1; j < element.size(); j++) {
+					strPow += element[j];
+				}
+				return stoi(strPow);
+			}
+		}
+	}
+	return 0;
+}
