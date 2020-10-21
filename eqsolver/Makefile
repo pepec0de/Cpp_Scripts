@@ -9,7 +9,7 @@ LDIR = lib
 
 LIBS = 
 
-CFLAGS = -I./include/ -pedantic -Wall -Wextra -Weffc++ 
+CFLAGS = -I./$(IDIR) -pedantic -Wall -Wextra -Weffc++ 
 
 _SRCS =
 SRCS = main.cpp $(patsubst %,$(SRCDIR)/%,$(_SRCS))
@@ -30,5 +30,3 @@ $(NAME): $(OBJ)
 clean:
 	rm -f $(ODIR)/*.o *~ core $(INCDIR)/*~
 	rm $(OUT)
-
-$(info Compilation end)
