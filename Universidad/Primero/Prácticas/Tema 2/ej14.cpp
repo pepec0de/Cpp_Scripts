@@ -36,8 +36,8 @@ int main() {
 	cout << endl;
 	
 	cout << "El sistema es: " << endl <<
-	a << "x +(" << b << y << ") = " << c << ";" << endl <<
-	d << "x +(" << e << y << ") = " << f << ";" << endl;
+	a << "x +(" << b << "y) = " << c << ";" << endl <<
+	d << "x +(" << e << "y) = " << f << ";" << endl;
 	
 	cout << endl;
 	
