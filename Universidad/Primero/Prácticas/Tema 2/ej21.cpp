@@ -26,20 +26,20 @@ void Complejo::pedir() {
 	cout << "Introduzca valor de D: ";
 	cin >> d;
 	
-	cout << "z1 = (" << a << ", " << b << ");\n z2 = (" << c << ", " << d << ");\n";
+	cout << "\nz1 = (" << a << ", " << b << ");\nz2 = (" << c << ", " << d << ");\n\n";
 }
 
 void Complejo::sumar() {
-	cout << "z1 + z2 = (" << a << ", " << b << ") + (" << c << ", " << d << ") = (" << a+b << ", " << c+d ")\n";
+	cout << "z1 + z2 = (" << a << ", " << b << ") + (" << c << ", " << d << ") = (" << a+b << ", " << c+d << ")\n";
 }
 void Complejo::restar() {
-	cout << "z1 - z2 = (" << a << ", " << b << ") - (" << c << ", " << d << ") = (" << a-b << ", " << c-d ")\n";
+	cout << "z1 - z2 = (" << a << ", " << b << ") - (" << c << ", " << d << ") = (" << a-b << ", " << c-d << ")\n";
 }
 void Complejo::multiplicar() {
-	cout << "z1 * z2 = (" << a << ", " << b << ") * (" << c << ", " << d << ") = (" << a*c - b*d << ", " << a*d + b*c ")\n";
+	cout << "z1 * z2 = (" << a << ", " << b << ") * (" << c << ", " << d << ") = (" << a*c - b*d << ", " << a*d + b*c << ")\n";
 }
 void Complejo::dividir() {
-	cout << "z1 / z2 = (" << a << ", " << b << ") / (" << c << ", " << d << ") = (" << (a*c + b*d) / (pow(c, 2) + pow(d, 2)) << ", " <<  / (pow(c, 2) + pow(d, 2)) ")\n";
+	cout << "z1 / z2 = (" << a << ", " << b << ") / (" << c << ", " << d << ") = (" << (a*c + b*d) / (pow(c, 2) + pow(d, 2)) << ", " << (b*c - a*d) / (pow(c, 2) + pow(d, 2)) << ")\n";
 }
 
 int main() {
