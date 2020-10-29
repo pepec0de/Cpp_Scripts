@@ -23,19 +23,19 @@ class CampoElec {
 };
 
 void CampoElec::Leer() {
-	cout << "Introduzca valor de Q(microCulombios): " << endl;
+	cout << "Introduzca valor de Q(microCulombios): ";
 	cin >> q;
-	cout << "Introduzca valor de R(metros): " << endl;
+	cout << "Introduzca valor de R(metros): ";
 	cin >> r;
 }
 
 double CampoElec::Intensidad() {
 	// Aplicamos la formula de campo eléctrico: E = k*q/r^2 (N/C)
-	return k*q / pow(r, 2);
+	return k * q*pow(10, -6) / pow(r, 2);
 }
 
 int main() {
-	CampoElect obj;
+	CampoElec obj;
 	obj.Leer();
 	cout << "La intensidad que hace el campo electrico en esa distancia es de: " << obj.Intensidad() << "Newton(s) por Columbio(s).\n";
 	return 0;
