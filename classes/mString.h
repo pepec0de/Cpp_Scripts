@@ -11,7 +11,10 @@ class String : string {
         string str;
 
     public:
-        String(string _str) { str = _str; }
+        //String(string _str) { str = _str; }
+        void operator=(const string &_str) {
+            str = _str;
+        }
 
         vector<string> split(string regex) {
             vector<string> vct;
