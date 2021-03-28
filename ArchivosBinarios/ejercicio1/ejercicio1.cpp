@@ -36,9 +36,10 @@ int main() {
     fichero.open("ejercicio1.dat", ios::binary | ios::out | ios::in);
     if (fichero.fail()) {
         cout << "FAIL()\n";
+        // Estas dos lineas son prescindibles
         fichero.close();
         fichero.clear();
-        fichero.open("ejercicio1.dat", ios::binary | ios::out);
+        fichero.open("ejercicio1.dat", ios::binary | ios::out | ios::trunc);
         fichero.close();
         fichero.clear();
         fichero.open("ejercicio1.dat", ios::binary | ios::out | ios::in);
@@ -47,7 +48,8 @@ int main() {
         fichero.write((char*) &angel, sizeof(Persona));
     }
 
-    fichero.seekg(0);
+//    fichero.seekg(0);
+    fichero.open("ejercicio1.dat", ios::binary | ios::out | ios::in);
 
     Persona copiaAngel;
     fichero.read((char*) &copiaAngel, sizeof(Persona));
