@@ -1,0 +1,20 @@
+# depslib dependency file v1.0
+1635163754 source:c:\users\pepe\documents\programas\dev\cpp\cpp_scripts\bignumbers\main.cpp
+	"include/UINT1024.h"
+	<chrono>
+
+1635164219 c:\users\pepe\documents\programas\dev\cpp\cpp_scripts\bignumbers\include\uint1024.h
+	<algorithm>
+	<bitset>
+	<iostream>
+	<vector>
+	<string>
+	<cmath>
+	<sstream>
+	<fstream>
+	<array>
+	<cstring>
+
+1634464105 source:c:\users\pepe\documents\programas\dev\cpp\cpp_scripts\bignumbers\src\uint1024.cpp
+	"../include/UINT1024.h"
+
